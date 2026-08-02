@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Classic Players Music Academy | Music, Dance & Fine Arts, Dunedin</title>
+<meta name="description" content="Classic Players Academy of Music & Fine Arts, piano, voice, guitar, violin, drums, dance and fine art lessons in Dunedin. Carnatic and Western classical training for children and adults, led by founder Anil Cheriyan. Trinity College London approved examination centre since 2008.">
+<meta name="theme-color" content="#0d1626">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Classic Players Academy of Music & Fine Arts | Dunedin">
+<meta property="og:description" content="Piano, voice, guitar, violin, drums, dance and fine art lessons in Dunedin. Carnatic and Western classical training for all ages. Trinity College London approved centre since 2008.">
+<meta property="og:image" content="img/ensemble.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1626'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23EDB833' text-anchor='middle'%3ECP%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --navy:#0d1626;
+  --navy-2:#111f36;
+  --ink:#1a2438;
+  --muted:#5c6577;
+  --bone:#f6f2e9;
+  --bone-2:#efe9db;
+  --white:#ffffff;
+  --gold:#EDB833;
+  --gold-soft:#F3D98A;
+  --line:rgba(15,26,46,.10);
+  --radius:16px;
+  --shadow:0 18px 50px -22px rgba(13,22,38,.45);
+  --maxw:1180px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Manrope',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--bone);
+  line-height:1.65;
+  font-size:17px;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img{image-orientation:from-image;max-width:100%;display:block}
+h1,h2,h3,h4,.display{font-family:'Cinzel',Georgia,serif;font-weight:600;line-height:1.15;letter-spacing:.01em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:'Cinzel',serif;font-size:.74rem;letter-spacing:.32em;
+  text-transform:uppercase;color:var(--gold);font-weight:600;
+  display:inline-flex;align-items:center;gap:12px;margin-bottom:20px;
+}
+.eyebrow::before{content:"";width:30px;height:1px;background:var(--gold);opacity:.7}
+.section{padding:96px 0}
+.section-head{max-width:640px;margin-bottom:56px}
+.section-head h2{font-size:clamp(1.9rem,4.4vw,3rem);color:var(--ink)}
+.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.section-head.center .eyebrow::before{display:none}
+.section-head p{margin-top:18px;color:var(--muted);font-size:1.05rem}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:'Manrope',sans-serif;font-weight:700;font-size:.98rem;
+  padding:15px 28px;border-radius:999px;cursor:pointer;border:1px solid transparent;
+  transition:transform .25s ease,background .25s ease,color .25s ease,box-shadow .25s ease;
+  min-height:52px;letter-spacing:.01em;
+}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 14px 30px -12px rgba(237,184,51,.6)}
+.btn-ghost{background:transparent;color:var(--white);border-color:rgba(255,255,255,.4)}
+.btn-ghost:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.btn-dark{background:var(--navy);color:var(--bone)}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn-outline{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-outline:hover{border-color:var(--gold);color:var(--navy)}
+.ico{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8}
+
+/* ===== Intro overlay ===== */
+#intro{
+  position:fixed;inset:0;z-index:9999;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;flex-direction:column;gap:18px;
+  transition:opacity .8s ease,visibility .8s ease;
+}
+#intro.hide{opacity:0;visibility:hidden}
+.intro-mark{font-family:'Cinzel',serif;color:var(--gold);font-size:clamp(1.5rem,5vw,2.4rem);
+  letter-spacing:.18em;opacity:0;transform:translateY(12px);animation:introUp .9s .1s forwards}
+.intro-sub{color:rgba(246,242,233,.6);letter-spacing:.35em;text-transform:uppercase;font-size:.7rem;
+  opacity:0;animation:introUp .9s .35s forwards}
+.intro-bar{width:0;height:2px;background:var(--gold);animation:introBar 1.3s .5s forwards ease}
+@keyframes introUp{to{opacity:1;transform:translateY(0)}}
+@keyframes introBar{to{width:150px}}
+
+/* ===== Nav ===== */
+header{position:fixed;top:0;left:0;right:0;z-index:900;transition:background .35s ease,box-shadow .35s ease,padding .35s ease;padding:20px 0}
+header.scrolled{background:rgba(13,22,38,.92);backdrop-filter:blur(12px);box-shadow:0 1px 0 rgba(255,255,255,.06);padding:12px 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--white)}
+.brand .badge{width:42px;height:42px;border-radius:11px;background:linear-gradient(145deg,#152540,#0d1626);
+  border:1px solid rgba(237,184,51,.5);display:grid;place-items:center;font-family:'Cinzel',serif;color:var(--gold);font-size:.95rem;font-weight:700}
+.brand b{font-family:'Cinzel',serif;font-weight:600;font-size:1.05rem;letter-spacing:.04em;line-height:1.1}
+.brand span{display:block;font-family:'Manrope';font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:600}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a{color:rgba(246,242,233,.82);font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{display:flex;align-items:center;gap:14px}
+.nav-phone{display:inline-flex;align-items:center;gap:9px;color:var(--white);font-weight:700;font-size:.95rem;padding:11px 20px;border-radius:999px;border:1px solid rgba(237,184,51,.55);transition:background .25s,transform .25s}
+.nav-phone:hover{background:var(--gold);color:var(--navy);transform:translateY(-1px)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:8px;color:var(--white)}
+.burger svg{width:28px;height:28px;stroke:currentColor;stroke-width:1.8;fill:none}
+.mobile-menu{position:fixed;inset:0;z-index:899;background:var(--navy);display:flex;flex-direction:column;justify-content:center;gap:8px;padding:40px;transform:translateX(100%);transition:transform .4s cubic-bezier(.7,0,.2,1);visibility:hidden}
+.mobile-menu.open{transform:translateX(0);visibility:visible}
+.mobile-menu a{color:var(--bone);font-family:'Cinzel',serif;font-size:1.5rem;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.mobile-menu a.mm-call{color:var(--navy);background:var(--gold);text-align:center;border-radius:999px;border:0;margin-top:24px;font-family:'Manrope';font-weight:700;font-size:1.1rem}
+.mm-close{position:absolute;top:26px;right:24px;background:none;border:0;color:var(--bone);cursor:pointer}
+.mm-close svg{width:30px;height:30px;stroke:currentColor;stroke-width:1.8;fill:none}
+
+/* ===== Hero ===== */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--navy);overflow:hidden}
+.hero-slides{position:absolute;inset:0}
+.hero-slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease;transform:scale(1.06)}
+.hero-slide.active{opacity:1;animation:slowZoom 8s ease forwards}
+@keyframes slowZoom{from{transform:scale(1.06)}to{transform:scale(1.14)}}
+.hero-slide img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.04)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(9,15,27,.9) 0%,rgba(9,15,27,.7) 42%,rgba(9,15,27,.42) 100%)}
+.hero-inner{position:relative;z-index:3;padding-top:120px;padding-bottom:60px;max-width:760px}
+.hero .eyebrow{color:var(--gold-soft)}
+.hero h1{color:var(--white);font-size:clamp(2.3rem,6vw,4.1rem);font-weight:700;line-height:1.08}
+.hero h1 em{font-style:italic;color:var(--gold);font-weight:500}
+.hero p.lede{color:rgba(246,242,233,.85);font-size:clamp(1.05rem,2.4vw,1.25rem);margin-top:24px;max-width:560px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:16px;margin-top:38px}
+.rating-badge{display:inline-flex;align-items:center;gap:14px;margin-top:34px;padding:14px 22px;border-radius:14px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(10px);max-width:max-content}
+.rating-badge .stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
+.rating-badge .rb-txt{color:var(--white);font-size:.9rem;line-height:1.35}
+.rating-badge .rb-txt b{font-weight:700}
+.rating-badge .rb-txt span{color:rgba(246,242,233,.6);display:block;font-size:.78rem}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(246,242,233,.55);
+  font-size:.7rem;letter-spacing:.25em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:8px}
+.scroll-hint span{width:1px;height:34px;background:linear-gradient(var(--gold),transparent);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* ===== Trust strip ===== */
+.trust{background:var(--navy-2);padding:0}
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.trust-item{padding:40px 34px;display:flex;gap:18px;align-items:flex-start;border-right:1px solid rgba(255,255,255,.07)}
+.trust-item:last-child{border-right:0}
+.trust-item .t-ico{width:46px;height:46px;flex:none;border-radius:12px;background:rgba(237,184,51,.12);border:1px solid rgba(237,184,51,.3);display:grid;place-items:center;color:var(--gold)}
+.trust-item h3{color:var(--white);font-family:'Manrope';font-weight:700;font-size:1.02rem;letter-spacing:0}
+.trust-item p{color:rgba(246,242,233,.62);font-size:.92rem;margin-top:4px}
+
+/* ===== Services ===== */
+.services{background:var(--bone)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.svc-card{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
+  transition:transform .35s ease,box-shadow .35s ease;display:flex;flex-direction:column}
+.svc-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -25px rgba(13,22,38,.5)}
+.svc-media{position:relative;aspect-ratio:16/10;overflow:hidden}
+.svc-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.04);transition:transform .6s ease}
+.svc-card:hover .svc-media img{transform:scale(1.07)}
+.svc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,22,38,.4),transparent 55%)}
+.svc-num{position:absolute;top:14px;left:14px;z-index:2;font-family:'Cinzel',serif;color:var(--gold);font-size:.8rem;letter-spacing:.15em;
+  background:rgba(13,22,38,.6);padding:6px 12px;border-radius:999px;border:1px solid rgba(237,184,51,.4)}
+.svc-body{padding:26px 26px 30px}
+.svc-body h3{font-size:1.28rem;color:var(--ink)}
+.svc-body p{color:var(--muted);font-size:.96rem;margin-top:10px}
+.svc-tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+.svc-tags span{font-size:.76rem;color:var(--navy);background:var(--bone-2);padding:5px 12px;border-radius:999px;font-weight:600;letter-spacing:.02em}
+
+/* ===== About ===== */
+.about{background:var(--white)}
+.about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center}
+.about-media{position:relative}
+.about-media img{width:100%;height:auto;object-fit:contain;border-radius:var(--radius)}
+.about-tag{position:absolute;bottom:-22px;right:-14px;background:var(--navy);color:var(--bone);padding:22px 26px;border-radius:14px;box-shadow:var(--shadow);max-width:210px}
+.about-tag b{font-family:'Cinzel',serif;color:var(--gold);font-size:2rem;display:block;line-height:1}
+.about-tag span{font-size:.82rem;color:rgba(246,242,233,.75);display:block;margin-top:6px}
+.about-copy p{color:var(--muted);margin-top:18px;font-size:1.03rem}
+.checklist{list-style:none;margin-top:28px;display:grid;gap:14px}
+.checklist li{display:flex;gap:14px;align-items:flex-start;font-weight:500;color:var(--ink)}
+.checklist .ck{width:26px;height:26px;flex:none;border-radius:50%;background:rgba(237,184,51,.15);color:var(--gold);display:grid;place-items:center;margin-top:2px}
+.checklist .ck svg{width:15px;height:15px;stroke:currentColor;stroke-width:2.4;fill:none}
+
+/* ===== Gallery ===== */
+.gallery{background:var(--bone-2)}
+.gal-grid{column-count:3;column-gap:18px}
+.gal-grid img{width:100%;height:auto;display:block;border-radius:12px;margin-bottom:18px;break-inside:avoid;filter:saturate(.82) contrast(1.04);transition:transform .4s ease,filter .4s ease}
+.gal-grid img:hover{transform:scale(1.02);filter:saturate(1) contrast(1.05)}
+
+/* ===== Team ===== */
+.team{background:var(--white)}
+.badge-note{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+  border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-top:16px;font-weight:600}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.team-card{text-align:center;padding:34px 22px;background:var(--bone);border-radius:var(--radius);border:1px solid var(--line);transition:transform .3s ease,box-shadow .3s ease}
+.team-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.avatar{width:78px;height:78px;margin:0 auto 18px;border-radius:50%;background:var(--navy);color:var(--gold);
+  display:grid;place-items:center;font-family:'Cinzel',serif;font-size:1.35rem;font-weight:600;border:2px solid var(--gold)}
+.team-card .role{font-family:'Cinzel',serif;font-size:1.12rem;color:var(--ink)}
+.team-card .who{color:var(--gold);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+.team-card p{color:var(--muted);font-size:.9rem;margin-top:12px}
+
+/* ===== Reviews ===== */
+.reviews{background:var(--bone)}
+.rev-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;margin-bottom:48px}
+.rev-score{display:flex;align-items:center;gap:16px}
+.rev-score .big{font-family:'Cinzel',serif;font-size:3.2rem;color:var(--ink);line-height:1}
+.rev-score .stars{color:var(--gold);font-size:1.1rem;letter-spacing:2px}
+.rev-score .sub{color:var(--muted);font-size:.9rem;margin-top:2px}
+.rev-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.rev-card{background:var(--white);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);position:relative;display:flex;flex-direction:column;gap:16px}
+.rev-card .quote{font-family:'Cinzel',serif;color:var(--gold);font-size:2.6rem;line-height:.6;opacity:.5}
+.rev-card .stars{color:var(--gold);letter-spacing:2px;font-size:.95rem}
+.rev-card p{color:var(--ink);font-size:.98rem;flex:1}
+.rev-who{display:flex;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:16px}
+.rev-who .rv-av{width:42px;height:42px;border-radius:50%;background:var(--navy);color:var(--gold);display:grid;place-items:center;font-family:'Cinzel',serif;font-weight:600;font-size:.95rem}
+.rev-who b{display:block;font-size:.95rem;color:var(--ink)}
+.rev-who span{font-size:.8rem;color:var(--muted)}
+.rev-actions{text-align:center;margin-top:44px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.example-flag{text-align:center;color:var(--muted);font-size:.82rem;margin-top:22px}
+
+/* ===== Review banner ===== */
+.rev-banner{background:var(--navy);position:relative;overflow:hidden}
+.rev-banner::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 80% 30%,rgba(237,184,51,.16),transparent 55%)}
+.rev-banner .wrap{position:relative;text-align:center;padding:80px 24px}
+.rev-banner .eyebrow{color:var(--gold-soft);justify-content:center}
+.rev-banner .eyebrow::before{display:none}
+.rev-banner h2{color:var(--white);font-size:clamp(1.8rem,4vw,2.7rem);max-width:640px;margin:0 auto 14px}
+.rev-banner p{color:rgba(246,242,233,.72);max-width:520px;margin:0 auto 30px}
+
+/* ===== Contact ===== */
+.contact{background:var(--navy);color:var(--bone)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.contact .eyebrow{color:var(--gold-soft)}
+.contact h2{color:var(--white);font-size:clamp(1.9rem,4vw,2.8rem)}
+.contact-lede{color:rgba(246,242,233,.75);margin-top:18px;max-width:440px}
+.info-rows{margin-top:32px;display:grid;gap:8px}
+.info-row{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.info-row .i-ico{width:44px;height:44px;flex:none;border-radius:11px;background:rgba(237,184,51,.12);border:1px solid rgba(237,184,51,.3);display:grid;place-items:center;color:var(--gold)}
+.info-row .i-ico svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.7}
+.info-row b{display:block;color:var(--white);font-size:1rem}
+.info-row span{color:rgba(246,242,233,.6);font-size:.88rem}
+.socials{display:flex;gap:12px;margin-top:28px}
+.socials a{width:46px;height:46px;border-radius:12px;border:1px solid rgba(255,255,255,.16);display:grid;place-items:center;color:var(--bone);transition:background .25s,color .25s,transform .25s,border-color .25s}
+.socials a:hover{background:var(--gold);color:var(--navy);border-color:var(--gold);transform:translateY(-3px)}
+.socials a svg{width:20px;height:20px;fill:currentColor}
+.contact-card{background:linear-gradient(160deg,#13233d,#0c1526);border:1px solid rgba(237,184,51,.25);border-radius:20px;padding:40px}
+.contact-card h3{font-family:'Cinzel',serif;color:var(--white);font-size:1.35rem;margin-bottom:8px}
+.contact-card p{color:rgba(246,242,233,.65);font-size:.95rem;margin-bottom:26px}
+.contact-btns{display:grid;gap:14px}
+.contact-btns .btn{width:100%;font-size:1.05rem;padding:18px}
+.contact-note{margin-top:22px;font-size:.82rem;color:rgba(246,242,233,.5);text-align:center}
+
+/* ===== Map ===== */
+.map-wrap{padding:0 0 96px;background:var(--navy)}
+.map-inner{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.map-frame{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(237,184,51,.25);line-height:0}
+.map-frame iframe{width:100%;height:420px;border:0;filter:saturate(.9)}
+
+/* ===== Footer ===== */
+footer{background:#080e1a;color:rgba(246,242,233,.6);padding:60px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.08)}
+.foot-brand .brand{margin-bottom:18px}
+.foot-brand p{font-size:.92rem;max-width:320px}
+.foot-col h4{font-family:'Manrope';color:var(--white);font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+.foot-col a{display:block;color:rgba(246,242,233,.6);font-size:.94rem;padding:6px 0;transition:color .2s}
+.foot-col a:hover{color:var(--gold)}
+.foot-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;padding-top:26px;font-size:.85rem}
+.foot-bottom .socials a{width:40px;height:40px}
+.foot-legal a{color:rgba(246,242,233,.6)}
+.foot-legal a:hover{color:var(--gold)}
+
+/* ===== Reveal animation ===== */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media(max-width:960px){
+  .nav-links{display:none}
+  .nav-phone{display:none}
+  .burger{display:block}
+  .trust-grid{grid-template-columns:1fr}
+  .trust-item{border-right:0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .about-grid{grid-template-columns:1fr;gap:56px}
+  .about-media{max-width:440px}
+  .about-tag{right:10px}
+  .team-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .gal-grid{column-count:2}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .foot-brand{grid-column:1/-1}
+}
+@media(max-width:560px){
+  .section{padding:66px 0}
+  .wrap{padding:0 20px}
+  body{font-size:16px}
+  .svc-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .gal-grid{column-count:1}
+  .foot-grid{grid-template-columns:1fr}
+  .about-tag{right:0;bottom:-16px;padding:18px 20px}
+  .rev-score .big{font-size:2.6rem}
+  .hero-inner{padding-top:110px}
+  .map-frame iframe{height:340px}
+  .rev-top{flex-direction:column;align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-slide{transition:none}
+  .hero-slide.active{animation:none}
+  .reveal{opacity:1;transform:none;transition:none}
+  *{scroll-behavior:auto}
+}
+/* brand logo images */
+.brand-logo{height:56px;width:auto;display:block}
+header.scrolled .brand-logo{height:48px}
+.foot-brand .brand-logo{height:84px}
+.intro-logo-img{width:min(74vw,320px);height:auto;display:block;opacity:0;transform:translateY(12px);animation:introUp .9s .1s forwards}
+.avatar.photo{padding:0;overflow:hidden;background:var(--navy)}
+.avatar.photo img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+</style>
+</head>
+<body>
+
+<!-- Intro overlay -->
+<div id="intro">
+  <img class="intro-logo-img" src="img/logo-light.png" alt="Classic Players Music Academy">
+  <div class="intro-bar"></div>
+</div>
+
+<!-- Header -->
+<header id="header">
+  <div class="wrap nav">
+    <a href="#top" class="brand" aria-label="Classic Players Music Academy home">
+      <img class="brand-logo" src="img/logo-light.png" alt="Classic Players Music Academy">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#lessons">Lessons</a>
+      <a href="#about">About</a>
+      <a href="#team">Tutors</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:+64272918236">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        027 291 8236
+      </a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><line x1="3" y1="7" x2="21" y2="7"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="17" x2="21" y2="17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mm-close" id="mmClose" aria-label="Close menu"><svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg></button>
+  <a href="#lessons">Lessons</a>
+  <a href="#about">About</a>
+  <a href="#team">Tutors</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#contact">Contact</a>
+  <a class="mm-call" href="tel:+64272918236">Call 027 291 8236</a>
+</div>
+
+<span id="top"></span>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide active"><img src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=1900&q=75" alt="A pianist practising at a grand piano" fetchpriority="high" width="1900" height="1267"></div>
+    <div class="hero-slide"><img src="img/ensemble.jpg" alt="Classic Players students performing together on guitar" loading="lazy" width="1900" height="1267"></div>
+    <div class="hero-slide"><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1900&q=75" alt="Sheet music on a stand" loading="lazy" width="1900" height="1267"></div>
+    <div class="hero-slide"><img src="img/building.jpg" alt="Classic Players Music Academy building in central Dunedin" loading="lazy" width="1900" height="1267"></div>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-inner">
+    <span class="eyebrow">Dunedin &middot; Est. 2008 &middot; Trinity Approved Centre</span>
+    <h1>Sing, play, dance and draw your <em>dreams</em>.</h1>
+    <p class="lede">One-to-one tuition in piano, voice, guitar, violin, drums, dance and fine art, grounded in Carnatic and Western classical training, taught patiently in the heart of Dunedin.</p>
+    <div class="hero-cta">
+      <a class="btn btn-gold" href="tel:+64272918236">
+        <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Book a trial lesson
+      </a>
+      <a class="btn btn-ghost" href="#lessons">Explore lessons</a>
+    </div>
+    <div class="rating-badge">
+      <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="rb-txt"><b>Trinity College London</b><span>Approved examination centre &middot; ID 57067</span></span>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Scroll<span></span></div>
+</section>
+
+
+<!-- Services -->
+<section class="section services" id="lessons">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">What we teach</span>
+      <h2>Music, dance and fine arts under one roof</h2>
+      <p>From a first note to a Trinity College London grade exam, every student gets a plan built around them, technique, repertoire and the joy of performing. Piano, strings, drums, voice, dance and art, all taught here in Dunedin.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc-card reveal">
+        <div class="svc-media"><span class="svc-num">01</span><img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=900&q=70" alt="Hands playing piano keys" loading="lazy" width="900" height="562"></div>
+        <div class="svc-body"><h3>Piano &amp; Keyboard</h3><p>Posture, sight-reading and touch from the first lesson, classical, film and contemporary pieces alongside solid technique.</p><div class="svc-tags"><span>Beginner–advanced</span><span>Ages 5+</span></div></div>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-media"><span class="svc-num">02</span><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=70" alt="A singer at a microphone" loading="lazy" width="900" height="562"></div>
+        <div class="svc-body"><h3>Voice, Carnatic &amp; Western</h3><p>Breath, pitch and expression across Carnatic tradition, Western vocal technique, fusion and church choir, for young and adult singers.</p><div class="svc-tags"><span>Carnatic &amp; Western</span><span>All levels</span></div></div>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-media"><span class="svc-num">03</span><img src="img/guitar.jpg" alt="Acoustic guitar close up" loading="lazy" width="900" height="562"></div>
+        <div class="svc-body"><h3>Guitar, Violin &amp; Flute</h3><p>Acoustic and classical guitar, eastern and western violin and flute, chords, bowing and reading built toward full pieces and exams.</p><div class="svc-tags"><span>Strings &amp; winds</span><span>Ages 8+</span></div></div>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-media"><span class="svc-num">04</span><img src="img/drums.jpg" alt="A drum kit with drumsticks" loading="lazy" width="900" height="562"></div>
+        <div class="svc-body"><h3>Drums, Tabla &amp; Percussion</h3><p>Drum kit, tabla and hand percussion, timing, coordination and groove taught with a repertoire that keeps students drumming.</p><div class="svc-tags"><span>Kit &amp; tabla</span><span>Ages 6+</span></div></div>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-media"><span class="svc-num">05</span><img src="img/dance.jpg" alt="A dancer mid-performance" loading="lazy" width="900" height="562"></div>
+        <div class="svc-body"><h3>Dance, Classical to Contemporary</h3><p>Classical and cinematic dance through to Bollywood, western and freestyle, posture, rhythm and choreography for every age.</p><div class="svc-tags"><span>Classical &amp; Bollywood</span><span>All ages</span></div></div>
+      </article>
+      <article class="svc-card reveal">
+        <div class="svc-media"><span class="svc-num">06</span><img src="img/finearts.jpg" alt="Paintbrushes covered in colour" loading="lazy" width="900" height="562"></div>
+        <div class="svc-body"><h3>Fine Arts, Drawing &amp; Painting</h3><p>Drawing, sketching, water and oil painting, calligraphy and crafts, building technique and imagination lesson by lesson.</p><div class="svc-tags"><span>Drawing &amp; painting</span><span>Ages 6+</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="section about" id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-media reveal">
+        <img src="img/poster.jpg" alt="Classic Players Academy of Music & Fine Arts, piano, drums, violin, guitar and music theory" loading="lazy" width="900" height="1125">
+        <div class="about-tag"><b>2008</b><span>teaching music, dance &amp; fine arts ever since</span></div>
+      </div>
+      <div class="about-copy reveal">
+        <span class="eyebrow">About the academy</span>
+        <h2>A classical foundation, taught with patience</h2>
+        <p>Classic Players Academy of Music &amp; Fine Arts started in 2008 in Kolenchery, Kerala under founder Anil Cheriyan, a place to learn music, dance and art properly, rooted in Carnatic and Western classical traditions. That same teaching now guides students here in Dunedin.</p>
+        <p>Classic Players is an approved Trinity College London examination centre (registered ID 57067). Students have earned Trinity diplomas along the way, including one of the youngest Indians to pass the ATCL piano diploma at just twelve.</p>
+        <p>Lessons are one-to-one and unhurried. Beginners build good habits from day one; more advanced players work toward graded exams, recitals and repertoire they're proud to perform.</p>
+        <ul class="checklist">
+          <li><span class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>One-to-one lessons tailored to each student's pace and goals</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Music, dance and fine arts, Carnatic and Western training</li>
+          <li><span class="ck"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span>Trinity College London approved centre, grades and diplomas</li>
+        </ul>
+        <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap">
+          <a class="btn btn-dark" href="#contact">Enquire about lessons</a>
+          <a class="btn btn-outline" href="#reviews">Read our reviews</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section gallery">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Inside the studio</span>
+      <h2>Where the practice happens</h2>
+    </div>
+    <div class="gal-grid reveal">
+      <img src="img/ensemble.jpg" alt="Classic Players students performing together on stage" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1558098329-a11cff621064?auto=format&fit=crop&w=700&q=70" alt="Acoustic guitar detail" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=700&q=70" alt="Studio instruments" loading="lazy">
+      <img src="img/guitar.jpg" alt="Classical guitar ready for a lesson" loading="lazy">
+      <img src="img/building.jpg" alt="Classic Players Music Academy in central Dunedin" loading="lazy">
+      <img src="https://images.unsplash.com/photo-1466428996289-fb355538da1b?auto=format&fit=crop&w=700&q=70" alt="A student performing on stage" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="section team" id="team">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Meet the tutors</span>
+      <h2>Who you'll learn with</h2>
+      <span class="badge-note">Founder shown; additional tutor roles are examples for this demo</span>
+    </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+        <div class="avatar photo"><img src="img/founder.jpg" alt="Anil Cheriyan, founder of Classic Players"></div>
+        <div class="role">Founder &amp; Principal Tutor</div>
+        <div class="who">Anil Cheriyan</div>
+        <p>Founded Classic Players in 2008 and teaches piano, voice and theory, the classical foundation the academy is built on.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar">PT</div>
+        <div class="role">Piano Tutor</div>
+        <div class="who">Example role</div>
+        <p>Guides beginners through their first pieces and coaches advanced students toward graded exams.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar">VT</div>
+        <div class="role">Voice Tutor</div>
+        <div class="who">Example role</div>
+        <p>Develops breath, pitch and confidence across Western and Carnatic vocal styles.</p>
+      </div>
+      <div class="team-card reveal">
+        <div class="avatar">ET</div>
+        <div class="role">Theory &amp; Exam Coach</div>
+        <div class="who">Example role</div>
+        <p>Keeps aural, sight-reading and written theory on track so exam day feels familiar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section class="section reviews" id="reviews">
+  <div class="wrap">
+    <div class="rev-top reveal">
+      <div class="section-head" style="margin-bottom:0">
+        <span class="eyebrow">What families say</span>
+        <h2>Loved by Dunedin students</h2>
+      </div>
+      <div class="rev-score">
+        <div>
+          <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="sub">Reviews from our Google page</div>
+        </div>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev-card reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Anil Cheriyan, a good musician. Classic Players academy is one of the best academies in Dunedin where we can send our kids to learn music with reasonable fees.</p>
+        <div class="rev-who"><span class="rv-av">EP</span><div><b>Eldho Peter</b><span>Google review</span></div></div>
+      </article>
+      <article class="rev-card reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>One of the best academies in Dunedin. Well qualified teaching professionals available. Excellent service and individual attention available. Highly recommended.</p>
+        <div class="rev-who"><span class="rv-av">RV</span><div><b>Rincy Varghese</b><span>Google review</span></div></div>
+      </article>
+      <article class="rev-card reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Wonderful music academy. Great academy, talented and experienced teachers who really bring the best out of every student.</p>
+        <div class="rev-who"><span class="rv-av">AS</span><div><b>Adithya S</b><span>Google review</span></div></div>
+      </article>
+      <article class="rev-card reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Talented and experienced teachers. The academy makes learning music genuinely enjoyable.</p>
+        <div class="rev-who"><span class="rv-av">JJ</span><div><b>Jini John</b><span>Google review</span></div></div>
+      </article>
+      <article class="rev-card reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>It is really awesome. Best music academy in Dunedin, highly recommend.</p>
+        <div class="rev-who"><span class="rv-av">TS</span><div><b>Thomas Sjohn</b><span>Google review</span></div></div>
+      </article>
+      <article class="rev-card reveal">
+        <div class="quote">&ldquo;</div>
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>Best music academy. Friendly, professional and great with kids and adults alike.</p>
+        <div class="rev-who"><span class="rv-av">EE</span><div><b>Ebel Eldo</b><span>Google review</span></div></div>
+      </article>
+    </div>
+    <p class="example-flag">A selection of reviews from Classic Players students and families in Dunedin.</p>
+    <div class="rev-actions">
+      <a class="btn btn-dark" href="https://www.google.com/search?q=Classic+Players+Music+Academy+Dunedin+reviews" target="_blank" rel="noopener">See all our Google reviews</a>
+    </div>
+  </div>
+</section>
+
+<!-- Review banner -->
+<section class="rev-banner">
+  <div class="wrap reveal">
+    <span class="eyebrow">Enjoyed your lessons?</span>
+    <h2>Help another Dunedin family find us</h2>
+    <p>A quick review on Google means the world, and helps other students discover Classic Players Music Academy.</p>
+    <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=Classic+Players+Music+Academy+Dunedin" target="_blank" rel="noopener">Leave us a review</a>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Get in touch</span>
+        <h2>Ready to start playing?</h2>
+        <p class="contact-lede">Tell us a little about the student and what you'd like to learn, we'll help you find the right lesson. New students always welcome.</p>
+        <div class="info-rows">
+          <div class="info-row">
+            <div class="i-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><b>027 291 8236</b><span>Call or text for lesson availability</span></div>
+          </div>
+          <div class="info-row">
+            <div class="i-ico"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><b><a href="#" data-gmail data-showaddr data-user="info" data-domain="classicplayers.nz" data-su="Music%20lesson%20enquiry" style="color:inherit">loading&hellip;</a></b><span>Email us about enrolments</span></div>
+          </div>
+          <div class="info-row">
+            <div class="i-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><b>121 King Edward Court, Dunedin</b><span>Upper Stuart Street, Dunedin 9016</span></div>
+          </div>
+        </div>
+        <div class="socials" aria-label="Social media">
+          <a href="https://www.facebook.com/CLASSICPLAYERS" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="https://www.instagram.com/classic_players_academy/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.85 2.85 0 0 0-.69-1.06 2.85 2.85 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07zm0 3.06A4.98 4.98 0 1 0 12 17a4.98 4.98 0 0 0 0-9.98zm0 8.21A3.23 3.23 0 1 1 12 8.77a3.23 3.23 0 0 1 0 6.46zm6.34-8.41a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0z"/></svg></a>
+          <a href="https://www.youtube.com/channel/UC7cAm5LnPnJuaTSXxT6uifQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+        </div>
+      </div>
+      <div class="contact-card reveal">
+        <h3>Start the conversation</h3>
+        <p>Call for a quick chat about availability, or email us and we'll get back to you.</p>
+        <div class="contact-btns">
+          <a class="btn btn-gold" href="tel:+64272918236">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call Classic Players
+          </a>
+          <a class="btn btn-ghost" href="#" data-gmail data-user="info" data-domain="classicplayers.nz" data-su="Music%20lesson%20enquiry" data-body="Hi%20Classic%20Players%2C%0A%0AI%27d%20like%20to%20ask%20about%20lessons.%0A%0AStudent%20name%3A%0AAge%3A%0AInstrument%20%2F%20voice%20%2F%20dance%20%2F%20art%3A%0APrevious%20experience%3A%0APreferred%20days%2Ftimes%3A%0A%0AThank%20you%21">
+            <svg class="ico" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email Classic Players
+          </a>
+        </div>
+        <p class="contact-note">No forms, no waiting, you'll reach us directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<div class="map-wrap">
+  <div class="map-inner">
+    <div class="map-frame reveal">
+      <iframe title="Classic Players Music Academy location in Dunedin" src="https://www.google.com/maps?q=121+King+Edward+Court,+Upper+Stuart+Street,+Dunedin+9016&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="#top" class="brand">
+          <img class="brand-logo" src="img/logo-light.png" alt="Classic Players Music Academy">
+        </a>
+        <p>One-to-one music, dance and fine arts tuition in Dunedin, piano, voice, guitar, violin, drums and art, built on a classical foundation since 2008. Trinity College London approved centre.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Explore</h4>
+        <a href="#lessons">Lessons</a>
+        <a href="#about">About</a>
+        <a href="#team">Tutors</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h4>Get in touch</h4>
+        <a href="tel:+64272918236">027 291 8236</a>
+        <a href="#" data-gmail data-showaddr data-user="info" data-domain="classicplayers.nz" data-su="Music%20lesson%20enquiry">loading&hellip;</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Classic+Players+Music+Academy+Dunedin" target="_blank" rel="noopener">Find us in Dunedin</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Classic+Players+Music+Academy+Dunedin" target="_blank" rel="noopener">Leave a review</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>&copy; <span id="yr"></span> Classic Players Music Academy &middot; Dunedin, New Zealand</div>
+      <div class="socials">
+        <a href="https://www.facebook.com/CLASSICPLAYERS" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+        <a href="https://www.instagram.com/classic_players_academy/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07z"/><circle cx="12" cy="12" r="3.23"/><circle cx="18.34" cy="5.66" r="1.16"/></svg></a>
+        <a href="https://www.youtube.com/channel/UC7cAm5LnPnJuaTSXxT6uifQ" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z"/></svg></a>
+      </div>
+      <div class="foot-legal">
+        <a href="terms.html">Terms</a> &nbsp;&middot;&nbsp; <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Intro overlay
+window.addEventListener('load',function(){
+  setTimeout(function(){document.getElementById('intro').classList.add('hide')},1500);
+});
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Header scroll state
+var header=document.getElementById('header');
+window.addEventListener('scroll',function(){
+  if(window.scrollY>40){header.classList.add('scrolled')}else{header.classList.remove('scrolled')}
+});
+
+// Mobile menu
+var burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu'),mmClose=document.getElementById('mmClose');
+function openMenu(){mm.classList.add('open');burger.setAttribute('aria-expanded','true')}
+function closeMenu(){mm.classList.remove('open');burger.setAttribute('aria-expanded','false')}
+burger.addEventListener('click',openMenu);
+mmClose.addEventListener('click',closeMenu);
+mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',closeMenu)});
+
+// Hero rotation
+(function(){
+  var slides=document.querySelectorAll('.hero-slide');
+  if(slides.length<2)return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+  var i=0;
+  setInterval(function(){
+    slides[i].classList.remove('active');
+    i=(i+1)%slides.length;
+    slides[i].classList.add('active');
+  },6000);
+})();
+
+// Reveal on scroll
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+// Gmail compose links (built in JS so the address is never raw in HTML)
+document.querySelectorAll('a[data-gmail]').forEach(function(a){
+  var to=a.getAttribute('data-user')+'@'+a.getAttribute('data-domain');
+  a.href='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(to)+'&su='+(a.getAttribute('data-su')||'')+'&body='+(a.getAttribute('data-body')||'');
+  a.target='_blank';a.rel='noopener';
+  if(a.hasAttribute('data-showaddr'))a.textContent=to;
+});
+</script>
+</body>
+</html>
