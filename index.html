@@ -194,7 +194,8 @@ header.scrolled{background:rgba(13,22,38,.92);backdrop-filter:blur(12px);box-sha
 .team{background:var(--white)}
 .badge-note{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
   border:1px solid var(--line);padding:6px 14px;border-radius:999px;margin-top:16px;font-weight:600}
-.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.team-grid{display:flex;justify-content:center;gap:24px}
+.team-card.solo{max-width:460px;width:100%}
 .team-card{text-align:center;padding:34px 22px;background:var(--bone);border-radius:var(--radius);border:1px solid var(--line);transition:transform .3s ease,box-shadow .3s ease}
 .team-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
 .avatar{width:78px;height:78px;margin:0 auto 18px;border-radius:50%;background:var(--navy);color:var(--gold);
@@ -488,32 +489,14 @@ header.scrolled .brand-logo{height:48px}
     <div class="section-head center reveal">
       <span class="eyebrow">Meet the tutors</span>
       <h2>Who you'll learn with</h2>
-      <span class="badge-note">Led by founder Anil Cheriyan and a team of 16 tutors. Founder shown; other tutor roles are examples for this demo</span>
+      <span class="badge-note">Founded and led by Anil Cheriyan</span>
     </div>
     <div class="team-grid">
-      <div class="team-card reveal">
+      <div class="team-card solo reveal">
         <div class="avatar photo"><img src="img/founder.jpg" alt="Anil Cheriyan, founder of Classic Players"></div>
         <div class="role">Founder &amp; Principal Tutor</div>
         <div class="who">Anil Cheriyan</div>
-        <p>Founded Classic Players in 2008 and teaches piano, voice and theory, the classical foundation the academy is built on.</p>
-      </div>
-      <div class="team-card reveal">
-        <div class="avatar">PT</div>
-        <div class="role">Piano Tutor</div>
-        <div class="who">Example role</div>
-        <p>Guides beginners through their first pieces and coaches advanced students toward graded exams.</p>
-      </div>
-      <div class="team-card reveal">
-        <div class="avatar">VT</div>
-        <div class="role">Voice Tutor</div>
-        <div class="who">Example role</div>
-        <p>Develops breath, pitch and confidence across Western and Carnatic vocal styles.</p>
-      </div>
-      <div class="team-card reveal">
-        <div class="avatar">ET</div>
-        <div class="role">Theory &amp; Exam Coach</div>
-        <div class="who">Example role</div>
-        <p>Keeps aural, sight-reading and written theory on track so exam day feels familiar.</p>
+        <p>Founded Classic Players in 2008 and teaches piano, voice and theory, the classical foundation the academy is built on. He leads a team of 16 tutors across music, dance and fine arts.</p>
       </div>
     </div>
   </div>
