@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Classic Players Music Academy | Music Lessons, Dunedin">
 <meta property="og:description" content="Piano, voice, guitar, strings and theory lessons in Dunedin. Carnatic and Western classical training for all ages. Rated 5.0 from 18 Google reviews.">
-<meta property="og:image" content="img/building.jpg">
+<meta property="og:image" content="img/anil-performing.jpg">
 
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230d1626'/%3E%3Ctext x='16' y='23' font-family='Georgia,serif' font-size='19' fill='%23EDB833' text-anchor='middle'%3ECP%3C/text%3E%3C/svg%3E">
 
@@ -190,6 +190,27 @@ header.scrolled{background:rgba(13,22,38,.92);backdrop-filter:blur(12px);box-sha
 .gal-grid img{width:100%;height:auto;display:block;border-radius:12px;margin-bottom:18px;break-inside:avoid;filter:saturate(.82) contrast(1.04);transition:transform .4s ease,filter .4s ease}
 .gal-grid img:hover{transform:scale(1.02);filter:saturate(1) contrast(1.05)}
 
+/* ===== Achievements ===== */
+.achv{background:var(--navy);color:#fff}
+.achv .section-head h2{color:#fff}
+.achv .section-head p{color:rgba(255,255,255,.72);margin-top:12px}
+.achv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.achv-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);overflow:hidden;transition:transform .3s ease}
+.achv-card:hover{transform:translateY(-6px)}
+.achv-card .ph{aspect-ratio:1/1;overflow:hidden;background:#0a1120}
+.achv-card .ph img{width:100%;height:100%;object-fit:cover;object-position:top center;filter:saturate(.9) contrast(1.03);transition:transform .5s ease}
+.achv-card:hover .ph img{transform:scale(1.05)}
+.achv-card .body{padding:20px 22px}
+.achv-card h3{font-size:1.08rem;color:#fff;margin-bottom:5px}
+.achv-card .role{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px}
+.achv-card p{font-size:.92rem;color:rgba(255,255,255,.68);line-height:1.6}
+.heritage{margin-top:46px;padding-top:40px;border-top:1px solid rgba(255,255,255,.14);display:grid;grid-template-columns:1.1fr 1fr .95fr;gap:24px;align-items:center}
+.heritage img{width:100%;height:auto;display:block;border-radius:12px;filter:saturate(.9) contrast(1.03)}
+.heritage-copy h3{color:#fff;font-size:1.25rem;margin-bottom:10px}
+.heritage-copy p{color:rgba(255,255,255,.7);font-size:.95rem;line-height:1.7}
+.heritage-copy p+p{margin-top:10px}
+@media(max-width:900px){.achv-grid{grid-template-columns:1fr}.heritage{grid-template-columns:1fr}}
+
 /* ===== Team ===== */
 .team{background:var(--white)}
 .badge-note{display:inline-block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
@@ -197,7 +218,10 @@ header.scrolled{background:rgba(13,22,38,.92);backdrop-filter:blur(12px);box-sha
 .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
 .team-card{text-align:center;padding:34px 22px;background:var(--bone);border-radius:var(--radius);border:1px solid var(--line);transition:transform .3s ease,box-shadow .3s ease}
 .team-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.avatar{width:78px;height:78px;margin:0 auto 18px;border-radius:50%;background:var(--navy);color:var(--gold);
+.avatar{width:78px;height:78px;margin:0 auto 18px;border-radius:50%;background:var(--navy);color:var(--gold);overflow:hidden;
+  }
+.avatar img{width:100%;height:100%;object-fit:cover;display:block}
+.avatar{
   display:grid;place-items:center;font-family:'Cinzel',serif;font-size:1.35rem;font-weight:600;border:2px solid var(--gold)}
 .team-card .role{font-family:'Cinzel',serif;font-size:1.12rem;color:var(--ink)}
 .team-card .who{color:var(--gold);font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
@@ -370,10 +394,10 @@ header.scrolled .brand-logo{height:48px}
 <!-- Hero -->
 <section class="hero">
   <div class="hero-slides" aria-hidden="true">
-    <div class="hero-slide active"><img src="https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=1900&q=75" alt="A pianist practising at a grand piano" fetchpriority="high" width="1900" height="1267"></div>
-    <div class="hero-slide"><img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1900&q=75" alt="Close-up of piano keys" loading="lazy" width="1900" height="1267"></div>
-    <div class="hero-slide"><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=1900&q=75" alt="Sheet music on a stand" loading="lazy" width="1900" height="1267"></div>
-    <div class="hero-slide"><img src="img/building.jpg" alt="Classic Players Music Academy building in central Dunedin" loading="lazy" width="1900" height="1267"></div>
+    <div class="hero-slide active"><img src="img/anil-performing.jpg" alt="Anil Cheriyan performing at the keyboard" fetchpriority="high" width="1600" height="1067"></div>
+    <div class="hero-slide"><img src="img/student-upright-piano.jpg" alt="A young student at the upright piano during a lesson" loading="lazy" width="1600" height="1200"></div>
+    <div class="hero-slide"><img src="img/guitar-close.jpg" alt="Close-up of a student's hand shaping a chord on the guitar" loading="lazy" width="1600" height="1067"></div>
+    <div class="hero-slide"><img src="img/studio-grand-piano.jpg" alt="An adult student practising at the grand piano" loading="lazy" width="1500" height="2000"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
@@ -406,27 +430,27 @@ header.scrolled .brand-logo{height:48px}
     </div>
     <div class="svc-grid">
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">01</span><img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=900&q=70" alt="Hands playing piano keys" loading="lazy" width="900" height="562"></div>
+        <div class="svc-media"><span class="svc-num">01</span><img src="img/yamaha-upright.jpg" alt="Upright piano set up for a lesson" loading="lazy" width="1500" height="1166"></div>
         <div class="svc-body"><h3>Piano &amp; Keyboard</h3><p>Posture, sight-reading and touch from the first lesson, classical, film and contemporary pieces alongside solid technique.</p><div class="svc-tags"><span>Beginner–advanced</span><span>Ages 5+</span></div></div>
       </article>
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">02</span><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=70" alt="A singer at a microphone" loading="lazy" width="900" height="562"></div>
+        <div class="svc-media"><span class="svc-num">02</span><img src="img/anil-performing.jpg" alt="Anil Cheriyan singing and playing at a performance" loading="lazy" width="1600" height="1067"></div>
         <div class="svc-body"><h3>Voice &amp; Carnatic Vocal</h3><p>Breath, pitch and expression, Western vocal technique and Carnatic tradition, taught with care for young and adult singers.</p><div class="svc-tags"><span>Classical &amp; contemporary</span><span>All levels</span></div></div>
       </article>
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">03</span><img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=900&q=70" alt="A classical guitar" loading="lazy" width="900" height="562"></div>
+        <div class="svc-media"><span class="svc-num">03</span><img src="img/guitar-close.jpg" alt="A student playing acoustic guitar" loading="lazy" width="1600" height="1067"></div>
         <div class="svc-body"><h3>Guitar</h3><p>Acoustic and classical guitar, chords, fingerstyle and reading, building to full songs and performance confidence.</p><div class="svc-tags"><span>Acoustic &amp; classical</span><span>Ages 8+</span></div></div>
       </article>
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">04</span><img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=900&q=70" alt="String players performing" loading="lazy" width="900" height="562"></div>
+        <div class="svc-media"><span class="svc-num">04</span><img src="img/ensemble-event.jpg" alt="Students performing together with violin and keyboard" loading="lazy" width="1400" height="1050"></div>
         <div class="svc-body"><h3>Violin &amp; Strings</h3><p>Intonation, bowing and tone developed step by step, with a repertoire that keeps students motivated and playing.</p><div class="svc-tags"><span>Foundations up</span><span>Ages 6+</span></div></div>
       </article>
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">05</span><img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=900&q=70" alt="Music theory notation" loading="lazy" width="900" height="562"></div>
+        <div class="svc-media"><span class="svc-num">05</span><img src="img/trinity-diploma-ltcl.jpg" alt="A student holding a Trinity College London music diploma" loading="lazy" width="1100" height="1463"></div>
         <div class="svc-body"><h3>Music Theory &amp; Exam Prep</h3><p>Reading, harmony and aural training that makes sense of the music, paired with mock exams for Trinity and ABRSM grades.</p><div class="svc-tags"><span>Grades 1–8</span><span>Aural &amp; sight-reading</span></div></div>
       </article>
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">06</span><img src="https://images.unsplash.com/photo-1470019693664-1d202d2c0907?auto=format&fit=crop&w=900&q=70" alt="Musicians performing together" loading="lazy" width="900" height="562"></div>
+        <div class="svc-media"><span class="svc-num">06</span><img src="img/presentation-student.jpg" alt="A student being presented with an award at the academy" loading="lazy" width="1200" height="1405"></div>
         <div class="svc-body"><h3>Performance &amp; Recitals</h3><p>Regular studio recitals and ensemble sessions so students learn to play for an audience, not just a practice room.</p><div class="svc-tags"><span>Studio recitals</span><span>Confidence</span></div></div>
       </article>
     </div>
@@ -438,7 +462,7 @@ header.scrolled .brand-logo{height:48px}
   <div class="wrap">
     <div class="about-grid">
       <div class="about-media reveal">
-        <img src="img/poster.jpg" alt="Classic Players Music Academy, piano, drums, violin, guitar & music theory" loading="lazy" width="900" height="1125">
+        <img src="img/students-studio.jpg" alt="Anil Cheriyan with students at the Classic Players studio" loading="lazy" width="1400" height="1050">
         <div class="about-tag"><b>18</b><span>five-star reviews from Dunedin families</span></div>
       </div>
       <div class="about-copy reveal">
@@ -468,12 +492,61 @@ header.scrolled .brand-logo{height:48px}
       <h2>Where the practice happens</h2>
     </div>
     <div class="gal-grid reveal">
-      <img src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=700&q=70" alt="Piano keys" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1558098329-a11cff621064?auto=format&fit=crop&w=700&q=70" alt="Acoustic guitar detail" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=700&q=70" alt="Studio instruments" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?auto=format&fit=crop&w=700&q=70" alt="Sheet music" loading="lazy">
-      <img src="img/building.jpg" alt="Musician performing" loading="lazy">
-      <img src="https://images.unsplash.com/photo-1466428996289-fb355538da1b?auto=format&fit=crop&w=700&q=70" alt="Playing music on stage" loading="lazy">
+      <img src="img/studio-grand-piano.jpg" alt="An adult student practising at the grand piano" loading="lazy" width="1500" height="2000">
+      <img src="img/students-studio.jpg" alt="Students and tutors at the Classic Players studio" loading="lazy" width="1400" height="1050">
+      <img src="img/student-upright-piano.jpg" alt="A young student at the upright piano" loading="lazy" width="1600" height="1200">
+      <img src="img/ensemble-event.jpg" alt="Students performing at a community event" loading="lazy" width="1400" height="1050">
+      <img src="img/presentation-student.jpg" alt="A student receiving an award at the academy" loading="lazy" width="1200" height="1405">
+      <img src="img/yamaha-upright.jpg" alt="Upright piano set up for a lesson" loading="lazy" width="1500" height="1166">
+      <img src="img/guitar-close.jpg" alt="A student shaping a chord on the guitar" loading="lazy" width="1600" height="1067">
+      <img src="img/heritage-building.jpg" alt="The heritage building where lessons are held" loading="lazy" width="1700" height="1075">
+      <img src="img/poster-instruments.jpg" alt="Classic Players lessons in piano, drums, violin, guitar and music theory" loading="lazy" width="1100" height="1374">
+    </div>
+  </div>
+</section>
+
+<!-- Achievements -->
+<section class="section achv">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Graded exams</span>
+      <h2>Students who go the distance</h2>
+      <p>Lessons build toward Trinity College London and ABRSM grades, and for the students who keep going, the diplomas past Grade 8.</p>
+    </div>
+    <div class="achv-grid">
+      <article class="achv-card reveal">
+        <div class="ph"><img src="img/award-atcl-piano.jpg" alt="Noyal Varghese, awarded the ATCL diploma in piano" loading="lazy" width="1100" height="1100"></div>
+        <div class="body">
+          <div class="role">ATCL Diploma</div>
+          <h3>Noyal Varghese</h3>
+          <p>Passed the Associate of Trinity College London diploma in piano, the first step past Grade 8.</p>
+        </div>
+      </article>
+      <article class="achv-card reveal">
+        <div class="ph"><img src="img/trinity-diploma-ltcl.jpg" alt="Sourojit Dutta holding his Trinity College London LTCL diploma" loading="lazy" width="1100" height="1463"></div>
+        <div class="body">
+          <div class="role">LTCL Diploma</div>
+          <h3>Sourojit Dutta</h3>
+          <p>Licentiate of Trinity College London in piano, a Level 6 diploma in music performance.</p>
+        </div>
+      </article>
+      <article class="achv-card reveal">
+        <div class="ph"><img src="img/violin-performer.jpg" alt="Meris Miriam Anil performing on violin at a community showcase" loading="lazy" width="1200" height="1200"></div>
+        <div class="body">
+          <div class="role">Performance</div>
+          <h3>Meris Miriam Anil</h3>
+          <p>Performed on violin at the Aaghosham showcase, one of the stages students play on through the year.</p>
+        </div>
+      </article>
+    </div>
+    <div class="heritage reveal">
+      <img src="img/trinity-examiner-group.jpg" alt="Classic Players students and tutors with a Trinity College London examiner" loading="lazy" width="1500" height="1000">
+      <img src="img/press-article.jpg" alt="Newspaper feature on Classic Players Music Academy moving lessons online" loading="lazy" width="1300" height="1216">
+      <div class="heritage-copy">
+        <h3>Teaching since 2008</h3>
+        <p>Anil Cheriyan started Classic Players in 2008 and has taught through Trinity College London grades and diplomas ever since, with examiners visiting each year.</p>
+        <p>When lessons moved online in 2020, the academy was written up as a model for how to do it without losing the one-to-one attention. That teaching now runs here in Dunedin.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -488,7 +561,7 @@ header.scrolled .brand-logo{height:48px}
     </div>
     <div class="team-grid">
       <div class="team-card reveal">
-        <div class="avatar">AC</div>
+        <div class="avatar"><img src="img/anil-portrait.jpg" alt="Anil Cheriyan, founder of Classic Players Music Academy" width="320" height="320" loading="lazy"></div>
         <div class="role">Founder &amp; Principal Tutor</div>
         <div class="who">Anil Cheriyan</div>
         <p>Leads the academy and teaches piano, voice and theory, the classical foundation Classic Players is built on.</p>
