@@ -125,6 +125,11 @@ header.scrolled{background:rgba(13,22,38,.92);backdrop-filter:blur(12px);box-sha
 .hero-slide.active{opacity:1;animation:slowZoom 8s ease forwards}
 @keyframes slowZoom{from{transform:scale(1.06)}to{transform:scale(1.14)}}
 .hero-slide img{width:100%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.04)}
+/* the hero crops hard at wide viewports, so each slide is anchored on the faces */
+.hero-slide img[src*="anil-performing"]{object-position:50% 26%}
+.hero-slide img[src*="student-upright-piano"]{object-position:50% 22%}
+.hero-slide img[src*="guitar-close"]{object-position:50% 24%}
+.hero-slide img[src*="students-studio"]{object-position:50% 26%}
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(105deg,rgba(9,15,27,.9) 0%,rgba(9,15,27,.7) 42%,rgba(9,15,27,.42) 100%)}
 .hero-inner{position:relative;z-index:3;padding-top:120px;padding-bottom:60px;max-width:760px}
 .hero .eyebrow{color:var(--gold-soft)}
@@ -160,6 +165,13 @@ header.scrolled{background:rgba(13,22,38,.92);backdrop-filter:blur(12px);box-sha
 .svc-card:hover{transform:translateY(-6px);box-shadow:0 30px 60px -25px rgba(13,22,38,.5)}
 .svc-media{position:relative;aspect-ratio:16/10;overflow:hidden}
 .svc-media img{width:100%;height:100%;object-fit:cover;filter:saturate(.82) contrast(1.04);transition:transform .6s ease}
+/* 16/10 cards crop tall photos, so each one is anchored on the faces */
+.svc-media img[src*="student-upright-piano"]{object-position:50% 16%}
+.svc-media img[src*="anil-performing"]{object-position:50% 32%}
+.svc-media img[src*="guitar-close"]{object-position:50% 0%}
+.svc-media img[src*="ensemble-event"]{object-position:50% 18%}
+.svc-media img[src*="trinity-diploma"]{object-position:50% 5%}
+.svc-media img[src*="presentation-student"]{object-position:50% 30%}
 .svc-card:hover .svc-media img{transform:scale(1.07)}
 .svc-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(13,22,38,.4),transparent 55%)}
 .svc-num{position:absolute;top:14px;left:14px;z-index:2;font-family:'Cinzel',serif;color:var(--gold);font-size:.8rem;letter-spacing:.15em;
@@ -397,7 +409,7 @@ header.scrolled .brand-logo{height:48px}
     <div class="hero-slide active"><img src="img/anil-performing.jpg" alt="Anil Cheriyan performing at the keyboard" fetchpriority="high" width="1600" height="1067"></div>
     <div class="hero-slide"><img src="img/student-upright-piano.jpg" alt="A young student at the upright piano during a lesson" loading="lazy" width="1600" height="1200"></div>
     <div class="hero-slide"><img src="img/guitar-close.jpg" alt="Close-up of a student's hand shaping a chord on the guitar" loading="lazy" width="1600" height="1067"></div>
-    <div class="hero-slide"><img src="img/studio-grand-piano.jpg" alt="An adult student practising at the grand piano" loading="lazy" width="1500" height="2000"></div>
+    <div class="hero-slide"><img src="img/students-studio.jpg" alt="Anil Cheriyan with students at the Classic Players studio" loading="lazy" width="1400" height="1050"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="wrap hero-inner">
@@ -430,7 +442,7 @@ header.scrolled .brand-logo{height:48px}
     </div>
     <div class="svc-grid">
       <article class="svc-card reveal">
-        <div class="svc-media"><span class="svc-num">01</span><img src="img/yamaha-upright.jpg" alt="Upright piano set up for a lesson" loading="lazy" width="1500" height="1166"></div>
+        <div class="svc-media"><span class="svc-num">01</span><img src="img/student-upright-piano.jpg" alt="A young student at the upright piano during a lesson" loading="lazy" width="1600" height="1200"></div>
         <div class="svc-body"><h3>Piano &amp; Keyboard</h3><p>Posture, sight-reading and touch from the first lesson, classical, film and contemporary pieces alongside solid technique.</p><div class="svc-tags"><span>Beginner–advanced</span><span>Ages 5+</span></div></div>
       </article>
       <article class="svc-card reveal">
